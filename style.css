@@ -1,16 +1,16 @@
 :root {
     --headline-color: #4bcf8b;
-    --textarea-hover: #a3f7b5;
-    --headline-font: .8rem calibri, helvetica;
-    --text-font: lighter .7rem calibri, helvetica; 
-    --background-color: rgb(224, 224, 224);
+    --hover-color: #a3f7b5;
+    --headline-font: .9rem Inconsolata, monospace, helvetica;
+    --text-font: lighter .8rem calibri, helvetica; 
+    --background-color: rgb(250, 250, 250);
 }
 
 
 main {
-    background-color: rgb(250, 250, 250);
+    background-color: var(--background-color);
     max-width: 220px;
-    min-height: 45vh;
+    min-height: 40vh;
     margin: 10vh auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -25,10 +25,16 @@ input[type=button] {
     font: var(--headline-font);
     padding: .25rem;
     color: var(--headline-color);
+    background-color: #e8ffec;
     width: 100%;
     margin: .5rem auto;
     border-radius: 3px;
-    transition: color 200ms ease-in-out;
+    transition: border-color, background-color 200ms ease-in-out;
+}
+
+input[type=button]:hover {
+    border-color: var(--hover-color);
+    background-color: var(--background-color);
 }
 
 .content h4 {
@@ -46,7 +52,7 @@ label {
     padding: .25rem;
     cursor: pointer;
     transition: all 200ms ease;
-    background-color: #d5fbdd;
+    background-color: #e8ffec;
 }
 
 .content {
@@ -55,6 +61,8 @@ label {
     border: 1px solid lightgray;
     padding: 1rem;
     border-top: 0;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     color: gray;
     text-align: center;
     grid-column: 1 / 4;
@@ -69,22 +77,23 @@ table th {
 }
 
 form textarea {
-    min-height: 150px;
+    min-height: 135px;
     width: 100%;
     border: 1px solid lightgray;
     font: var(--text-font);
     padding: .25rem;
     box-sizing: border-box;
     transition: border-color 200ms ease-in-out;
+    color: var(--headline-color);
     resize: none;
 }
 
 form textarea:hover, form textarea:focus {
-    border-color: var(--textarea-hover);
+    border-color: var(--hover-color);
 }
 
 #section1 h4:nth-child(1) {
-    margin: 0;
+    margin: 1rem;
 }
 
 #section2 p {
@@ -94,8 +103,12 @@ form textarea:hover, form textarea:focus {
     width: max-content;
 }
 
+#section2 p:hover {
+    color: var(--hover-color);
+}
+
 #invoiceDescription {
-    margin: 10vh auto;
+    margin: 8vh auto;
 }
 
 #tab1:checked ~ #section1, #tab2:checked ~ #section2, #tab3:checked ~ #section3 {
