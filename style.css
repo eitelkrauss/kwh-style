@@ -1,0 +1,114 @@
+:root {
+    --headline-color: #4bcf8b;
+    --textarea-hover: #a3f7b5;
+    --headline-font: .8rem calibri, helvetica;
+    --text-font: lighter .7rem calibri, helvetica; 
+    --background-color: rgb(224, 224, 224);
+}
+
+
+main {
+    background-color: rgb(250, 250, 250);
+    max-width: 220px;
+    min-height: 45vh;
+    margin: 10vh auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2rem auto
+}
+
+input[type=radio] {
+    display: none;
+}
+
+input[type=button] {
+    font: var(--headline-font);
+    padding: .25rem;
+    color: var(--headline-color);
+    width: 100%;
+    margin: .5rem auto;
+    border-radius: 3px;
+    transition: color 200ms ease-in-out;
+}
+
+.content h4 {
+    color: var(--headline-color);
+    font: var(--headline-font);
+}
+
+label {
+    border: 1px solid lightgray;
+    /*border-top-left-radius: 5px;
+    border-top-right-radius: 5px;*/
+    text-align: center;
+    font: var(--headline-font);
+    color: var(--headline-color);
+    padding: .25rem;
+    cursor: pointer;
+    transition: all 200ms ease;
+    background-color: #d5fbdd;
+}
+
+.content {
+    display: none;
+    font: var(--text-font);
+    border: 1px solid lightgray;
+    padding: 1rem;
+    border-top: 0;
+    color: gray;
+    text-align: center;
+    grid-column: 1 / 4;
+}
+
+#nodeInfo table {
+    width: 100%;
+}
+
+table th {
+    color: rgb(175, 175, 175);
+}
+
+form textarea {
+    min-height: 150px;
+    width: 100%;
+    border: 1px solid lightgray;
+    font: var(--text-font);
+    padding: .25rem;
+    box-sizing: border-box;
+    transition: border-color 200ms ease-in-out;
+    resize: none;
+}
+
+form textarea:hover, form textarea:focus {
+    border-color: var(--textarea-hover);
+}
+
+#section1 h4:nth-child(1) {
+    margin: 0;
+}
+
+#section2 p {
+    margin: 0;
+    display: inline;
+    color: var(--headline-color);
+    width: max-content;
+}
+
+#invoiceDescription {
+    margin: 10vh auto;
+}
+
+#tab1:checked ~ #section1, #tab2:checked ~ #section2, #tab3:checked ~ #section3 {
+    display: block;
+}
+
+main [id^="tab"]:checked + label {
+    background-color: rgb(250, 250, 250);
+    border-bottom: none;
+    color: var(--headline-color);
+}
+
+main [id^="tab"]:hover + label {
+    background-color: rgb(250, 250, 250);
+    color: var(--headline-color);
+}
