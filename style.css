@@ -1,20 +1,22 @@
 :root {
-    --headline-color: #4bcf8b;
+    --headline-color: #41b67a;
     --hover-color: #a3f7b5;
-    --headline-font: .9rem Inconsolata, monospace, helvetica;
+    --headline-font: bold 1rem Inconsolata, monospace, helvetica;
     --text-font: lighter .8rem calibri, helvetica; 
     --background-color: rgb(250, 250, 250);
 }
 
+body {
+    background-color: gray;
+}
 
 main {
-    background-color: var(--background-color);
-    max-width: 220px;
-    min-height: 40vh;
+    max-width: 250px;
+    min-height: 45vh;
     margin: 10vh auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2rem auto
+    grid-template-rows: 2.5rem auto
 }
 
 input[type=radio] {
@@ -49,7 +51,7 @@ label {
     text-align: center;
     font: var(--headline-font);
     color: var(--headline-color);
-    padding: .25rem;
+    padding: .5rem;
     cursor: pointer;
     transition: all 200ms ease;
     background-color: #e8ffec;
@@ -57,12 +59,13 @@ label {
 
 .content {
     display: none;
+    background-color: var(--background-color);
     font: var(--text-font);
     border: 1px solid lightgray;
     padding: 1rem;
     border-top: 0;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     color: gray;
     text-align: center;
     grid-column: 1 / 4;
@@ -78,9 +81,10 @@ table th {
 
 form textarea {
     min-height: 135px;
+    margin: 2vh auto 1vh auto;
     width: 100%;
     border: 1px solid lightgray;
-    font: var(--text-font);
+    font: .8rem Inconsolata, monospace, calibri, helvetica;
     padding: .25rem;
     box-sizing: border-box;
     transition: border-color 200ms ease-in-out;
