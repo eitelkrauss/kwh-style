@@ -1,9 +1,16 @@
 :root {
-    --headline-color: #41b67a;
-    --hover-color: #a3f7b5;
-    --headline-font: bold 1rem Inconsolata, monospace, helvetica;
-    --text-font: lighter .8rem calibri, helvetica; 
-    --background-color: rgb(250, 250, 250);
+    --headline-color: gray;
+    --headline-font: 1rem Inconsolata, monospace, helvetica;
+    --text-font: lighter .9rem calibri, helvetica; 
+    --text-font-color: lightgray;
+    --highlighted-text: #74d3ab;
+    --background-color: #f9fffc;
+    --second-background: #a0eec0;
+    --button-font: 1.2rem Inconsolata, monospace, helvetica;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -12,18 +19,18 @@ body {
 
 main {
     max-width: 250px;
-    min-height: 55vh;
+    min-height: 60vh;
     margin: 10vh auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 3.5rem 2.5rem auto
+    grid-template-rows: 5rem 2.5rem auto
 }
 
 header {
     grid-column: 1 / 4;
     width: 100%;
     text-align: center;
-    background-color: #e8ffec;
+    background-color: var(--second-background);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -31,7 +38,7 @@ header {
 #logo {
     height: 1.5rem;
     width: 1.5rem;
-    margin: 2.5vh;
+    margin: 4vh;
 }
 
 input[type=radio] {
@@ -39,18 +46,18 @@ input[type=radio] {
 }
 
 input[type=button] {
-    font: var(--headline-font);
-    padding: .25rem;
-    color: var(--headline-color);
-    background-color: #e8ffec;
+    font: var(--button-font);
+    padding: .5rem;
+    color: var(--highlighted-text);
+    background-color: var(--background-color);
     width: 100%;
     margin: .5rem auto;
     border-radius: 3px;
-    transition: border-color, background-color 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 input[type=button]:hover {
-    border-color: var(--hover-color);
+    border-color: #a0eec0;
     background-color: var(--background-color);
 }
 
@@ -60,17 +67,15 @@ input[type=button]:hover {
 }
 
 label {
-    /*border: 1px solid lightgray;*/
-    /*border-top-left-radius: 5px;
-    border-top-right-radius: 5px;*/
-    border-bottom: 1px solid lightgray;
+    /*border-bottom: 2px solid lightgray;*/
     text-align: center;
     font: var(--headline-font);
     color: var(--headline-color);
     padding: .5rem;
     cursor: pointer;
-    transition: all 200ms ease;
-    background-color: #e8ffec;
+    transition: all 300ms ease-in;
+    background-color: #a0eec0;
+    
 }
 
 .content {
@@ -108,7 +113,7 @@ form textarea {
 }
 
 form textarea:hover, form textarea:focus {
-    border-color: var(--hover-color);
+    border-color: var(--second-background);
 }
 
 #section1 h4:nth-child(1) {
@@ -118,12 +123,19 @@ form textarea:hover, form textarea:focus {
 #section2 p {
     margin: 0;
     display: inline;
-    color: var(--headline-color);
+    color: var(--highlighted-text);
     width: max-content;
+    font: var(--button-font);
+    font-size: 1rem;
+    transition: color 200ms ease-in-out;
 }
 
 #section2 p:hover {
-    color: var(--hover-color);
+    color: var(--second-background);
+}
+
+#section2 p:active {
+    columns: var(--second-background);
 }
 
 #invoiceDescription {
@@ -136,14 +148,14 @@ form textarea:hover, form textarea:focus {
 
 main [id^="tab"]:checked + label {
     background-color: rgb(250, 250, 250);
-    border: 1px solid lightgray;
+    /*border: 2px solid lightgray;*/
     border-bottom: 0;
     color: var(--headline-color);
 }
 
 main [id^="tab"]:hover + label {
     background-color: rgb(250, 250, 250);
-    border: 1px solid lightgray;
+    /*border: 2px solid lightgray;*/
     border-bottom: none;
     color: var(--headline-color);
 }
