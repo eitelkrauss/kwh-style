@@ -97,21 +97,26 @@ label {
 #nodeInfo table {
     width: 100%;
     font: var(--headline-font);
-    font-size: .6rem;
-    color: rgb(165, 165, 165);
-    border: 1px solid lightgray;
-    border-radius: 5px;
+    font-size: .5rem;
+    color: rgb(128, 128, 128);
     position: relative;
-    left: .5rem;
-    padding: .25rem;
+    left: 1.5rem;
 }
 
 table th {
     text-align: left;
+    font: var(--text-font);
+    font-size: .5rem;
+    font-weight: bold;
 }
 
 table td {
-    text-align: right;
+    text-align: justify;
+    max-width: 6rem;
+}
+
+#nodeID {
+    word-wrap: break-word;
 }
 
 form textarea {
