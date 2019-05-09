@@ -1,5 +1,5 @@
 :root {
-    --headline-color: gray;
+    --headline-color: rgb(146, 146, 146);
     --headline-font: 1rem Inconsolata, monospace, helvetica;
     --text-font: lighter .9rem calibri, helvetica; 
     --text-font-color: lightgray;
@@ -33,12 +33,15 @@ header {
     background-color: var(--second-background);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #logo {
     height: 1.5rem;
     width: 1.5rem;
-    margin: 4vh;
+    /*margin: 4vh;*/
 }
 
 input[type=radio] {
@@ -73,7 +76,7 @@ label {
     color: var(--headline-color);
     padding: .5rem;
     cursor: pointer;
-    transition: all 200ms ease-in;
+    transition: all 120ms ease-in;
     background-color: var(--second-background);
     
 }
@@ -93,10 +96,22 @@ label {
 
 #nodeInfo table {
     width: 100%;
+    font: var(--headline-font);
+    font-size: .6rem;
+    color: rgb(165, 165, 165);
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    position: relative;
+    left: .5rem;
+    padding: .25rem;
 }
 
 table th {
-    color: rgb(175, 175, 175);
+    text-align: left;
+}
+
+table td {
+    text-align: right;
 }
 
 form textarea {
@@ -124,7 +139,6 @@ form textarea:hover, form textarea:focus {
     margin: 0;
     display: inline;
     color: var(--highlighted-text);
-    width: max-content;
     font: var(--button-font);
     font-size: 1rem;
     transition: color 200ms ease-in-out;
