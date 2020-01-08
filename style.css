@@ -1,12 +1,12 @@
 :root {
     --headline-color: rgb(146, 146, 146);
-    --headline-font: 1rem Inconsolata, monospace, helvetica;
-    --text-font: lighter .9rem calibri, helvetica; 
+    --headline-font: 1.2rem 'Inconsolata', monospace, helvetica;
+    --text-font: lighter .8rem arial, helvetica; 
     --text-font-color: lightgray;
     --highlighted-text: #74d3ab;
     --background-color: #f9fffc;
     --second-background: #a0eec0;
-    --button-font: 1.2rem Inconsolata, monospace, helvetica;
+    --button-font: 1.2rem 'Inconsolata', monospace, helvetica;
 }
 
 * {
@@ -19,7 +19,7 @@ body {
 
 main {
     max-width: 250px;
-    min-height: 60vh;
+    min-height: 45vh;
     margin: 10vh auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
